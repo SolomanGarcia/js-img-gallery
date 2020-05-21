@@ -10,4 +10,8 @@ nextBtn.addEventListener("click", function () {
   currentlySelected++;
   galleryImgs[currentlySelected].classList.add("active");
   prevBtn.disabled = false;
+
+  if (galleryImgs.length === currentlySelected + 1) {
+    nextBtn.disabled = true;
+  }
 });
